@@ -39,14 +39,14 @@ print( xtable( head( data[which(data$code == "FL"), ] ) ), type = "html" )
 #data[which(data$code == "OH"),"votes"] <- 0
 
 p1 <- rCharts$new()
-p1$field( 'lib', "assets/x512paths" )
+p1$field( 'lib', "www/assets/x512paths" )
 p1$set( data = toJSONArray( data ) )
 p1$print( 'g-chart' )
 ```
 ---
 
 ## Additional Credit from me
-Thanks [Ramnath](http://github.com/ramnathv) for rCharts and slidify.
+Thanks [Ramnath](http://github.com/ramnathv) for rCharts and slidify and genius bug elimination.
 
 ## Credits in Original Example
 
