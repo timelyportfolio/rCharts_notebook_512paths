@@ -17,6 +17,7 @@ knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)
 
 
 ---
+### Let's Play With the Data to See What Happens
 ```{r}
 #get data from downloaded NYT tsv and inject in through params
 data <- read.delim(file = "http://timelyportfolio.github.io/rCharts_512paths/data/states.tsv")
