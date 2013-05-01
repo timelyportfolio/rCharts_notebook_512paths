@@ -1,5 +1,5 @@
-## R Notebook with rCharts
-<h2 style="color:rgb(148, 190, 163)"> NY Times 512 Paths to the White House</h2>
+# R Notebook with rCharts
+<h2 style="color:rgb(148, 190, 163);text-align:center"> NY Times 512 Paths to the White House</h2>
 <br/>
 ### Introduction and Setup
 This is a short demo on recreating the **NY Times** interactive feauture [512 Paths to the White House](http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0) in an R Markdown notebook, using rCharts and Shiny. If you want to follow along, please install `rCharts` from `github` using `devtools`.  To see the original tutorial, go [here](http://timelyportfolio.github.io/rCharts_512paths).
@@ -53,11 +53,11 @@ p1$print( 'g-chart' )
 ```
 ---
 
-## Credits in Original Example
+### Credits in Original Example
 
 >I would like to acknowledge the efforts of @yihui and @rstudio in bringing R Notebooks to the R community. I would like to thank @yihui for his excellent shiny app in the knitr package, which was the basis for this app. Without their efforts, rCharts and this demo would not have been possible.
 
-## Additional Credit from me
+### Additional Credit from me
 Thanks [Ramnath](http://github.com/ramnathv) for rCharts and slidify and genius bug elimination.
 
 
