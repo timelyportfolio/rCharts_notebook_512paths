@@ -26,8 +26,17 @@ require(xtable)
 print( xtable( head( data ) ), type = "html" )
 
 #let's randomize the order a bit and make some states more powerful
-data[,-5] <- data[order( runif( n=nrow( data ) ) ),-5]
-print( xtable( head( data ) ), type = "html" )
+#data[,-5] <- data[order( runif( n=nrow( data ) ) ),-5]
+#print( xtable( head( data ) ), type = "html" )
+
+#now let's deliberately change some data
+print( xtable( head( data[which(data$code == "FL"), ] ) ), type = "html" )
+#data[which(data$code == "FL"),"votes"] <- 10
+#data[which(data$code == "FL"),"rep"] <- 0.9
+#data[which(data$code == "FL"),"dem"] <- 1 - data[which(data$code == "FL"),"rep"]
+#print( xtable( head( data[which(data$code == "FL"), ] ) ), type = "html" )
+#print( xtable( head( data[which(data$code == "OH"), ] ) ), type = "html" )
+#data[which(data$code == "OH"),"votes"] <- 0
 
 p1 <- rCharts$new()
 p1$field( 'lib', 'x512paths' )
