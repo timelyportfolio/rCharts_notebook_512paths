@@ -1,4 +1,5 @@
-## R Notebook and rCharts for NY Times 512 Paths to the White House
+## R Notebook with rCharts
+## NY Times 512 Paths to the White House
 
 This is a short demo on recreating the **NY Times** interactive feauture [512 Paths to the White House](http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0) in an R Markdown notebook, using rCharts and Shiny. If you want to follow along, please install `rCharts` from `github` using `devtools`.
 
@@ -17,21 +18,26 @@ knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = F)
 
 
 ---
-### Let's Play With the Data to See What Happens
+### Play With the Data to See What Happens
 ```{r}
 #get data from downloaded NYT tsv and inject in through params
 data <- read.delim(file = "http://timelyportfolio.github.io/rCharts_512paths/data/states.tsv")
 
 #quick look at the data
 require(xtable)
+
+options(
+  xtable.html.table.attributes = 
+    'class="table table-condensed table-bordered table-striped"'
+)
 print( xtable( head( data ) ), type = "html" )
 
-#let's randomize the order a bit and make some states more powerful
+#cat("<h4>let's randomize the order a bit and make some states more powerful</h4>")
 #data[,-5] <- data[order( runif( n=nrow( data ) ) ),-5]
 #print( xtable( head( data ) ), type = "html" )
 
 #now let's deliberately change some data
-print( xtable( head( data[which(data$code == "FL"), ] ) ), type = "html" )
+#print( xtable( head( data[which(data$code == "FL"), ] ) ), type = "html" )
 #data[which(data$code == "FL"),"votes"] <- 10
 #data[which(data$code == "FL"),"rep"] <- 0.9
 #data[which(data$code == "FL"),"dem"] <- 1 - data[which(data$code == "FL"),"rep"]
@@ -46,12 +52,13 @@ p1$print( 'g-chart' )
 ```
 ---
 
-## Additional Credit from me
-Thanks [Ramnath](http://github.com/ramnathv) for rCharts and slidify and genius bug elimination.
-
 ## Credits in Original Example
 
 I would like to acknowledge the efforts of @yihui and @rstudio in bringing R Notebooks to the R community. I would like to thank @yihui for his excellent shiny app in the knitr package, which was the basis for this app. Without their efforts, rCharts and this demo would not have been possible.
+
+## Additional Credit from me
+Thanks [Ramnath](http://github.com/ramnathv) for rCharts and slidify and genius bug elimination.
+
 
 For more information, check out
 
