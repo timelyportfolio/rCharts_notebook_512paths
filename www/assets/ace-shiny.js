@@ -38,9 +38,9 @@ $(document).ready(function() {
     $('#nbSrc').val(editor.getValue());
     $('#proxy button').trigger('click');
   }
-  var w = Math.max($(window).width()/2, 300);
-  $('#notebook').width(w - 10);
-  $('#nbOut').css('left', w + 10 + 'px');
+  var w = Math.max($(window).width()/2, 400);
+  $('#notebook').width(w - 100);
+  $('#nbOut').css('left', w - 50 + 'px');
   if (h) {
     // pass a url as a query string after ? in the url
     h = h.replace('?', '');
