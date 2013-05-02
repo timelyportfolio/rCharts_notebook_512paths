@@ -34,7 +34,7 @@ options(
 print( xtable( head( data ) ), type = "html" )
 
 #cat("<h4>let's randomize the order a bit and make some states more powerful</h4>")
-#data[,-5] <- data[order( runif( n=nrow( data ) ) ),-5]
+#data$votes <- data$votes[order( runif( n = nrow( data ) ) )]
 #print( xtable( head( data ) ), type = "html" )
 
 #now let's deliberately change some data
